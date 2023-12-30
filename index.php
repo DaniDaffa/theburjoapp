@@ -13,69 +13,6 @@ if (!isset($_SESSION["akun-admin"]) && !isset($_SESSION["akun-user"])) {
 } 
 
 
-
-if (isset($_GET["transaksi"])) {
-
-    $menu = ambil_data("SELECT * FROM transaksi");
-    
-} else if (isset($_GET["pesanan"])) {
-
-    $menu = ambil_data("SELECT p.kode_pesanan, tk.nama_pelanggan, p.kode_menu, p.qty
-
-                        FROM pesanan AS p
-
-                        JOIN transaksi AS tk ON (tk.kode_pesanan = p.kode_pesanan)
-
-                      ");
-
-} else {
-
-    if (!isset($_GET["search"])) {
-
-        $menu = ambil_data("SELECT * FROM menu ORDER BY kode_menu DESC");
-
-    } else {
-
-        $key_search = $_GET["key-search"];
-
-        $menu = ambil_data("SELECT * FROM menu WHERE nama LIKE '%$key_search%' OR
-
-                                                    harga LIKE '%$key_search%' OR
-
-                                                    kategori LIKE '%$key_search%' OR
-
-                                                    `status` LIKE '%$key_search%'
-
-                                                    ORDER BY kode_menu DESC
-
-        ");
-
-    }
-
-}
-
-
-
-if (isset($_POST["pesan"])) {
-
-    $pesanan = tambah_data_pesanan();
-
-    echo $pesanan > 0
-
-    ? "<script>
-
-        alert('Pesanan Berhasil Dikirim!');
-
-    </script>"
-
-    : "<script>
-
-        alert('Pesanan Gagal Dikirim!');
-
-    </script>";
-
-}
-
 ?>
 
 
