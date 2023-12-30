@@ -48,9 +48,9 @@ function register_akun()
 
 
 
-    mysqli_query($koneksi, "INSERT INTO `user`
+    mysqli_query($koneksi, "INSERT INTO `user` (username, password)
 
-                            VALUES ('', '$username', '$password')
+                            VALUES ('$username', '$password')
 
     ");
 
@@ -325,7 +325,7 @@ function hapus_data_menu()
 
     $file_gambar = ambil_data("SELECT * FROM menu WHERE id_menu = $id_menu")[0]["gambar"];
 
-    unlink("src/img/$file_gambar");
+    if (file_exists("src/img/$file_gambar")) unlink("src/img/$file_gambar");
 
 
 
@@ -399,9 +399,9 @@ function tambah_data_pesanan()
 
         $qty = $lp["qty"];
 
-        mysqli_query($koneksi, "INSERT INTO pesanan
+        mysqli_query($koneksi, "INSERT INTO `pesanan` (kode_pesanan, kode_menu, qty)
 
-                                VALUES ('', '$kode_pesanan', '$kode_menu', $qty);
+                                VALUES ('$kode_pesanan', '$kode_menu', $qty);
 
         ");
     }
@@ -410,9 +410,9 @@ function tambah_data_pesanan()
 
     // Tambah Data Transaksi
 
-    mysqli_query($koneksi, "INSERT INTO transaksi
+    mysqli_query($koneksi, "INSERT INTO `transaksi` (kode_pesanan, nama_pelanggan, waktu)
 
-                            VALUES ('', '$kode_pesanan', '$pelanggan', NOW())
+                            VALUES ('$kode_pesanan', '$pelanggan', NOW())
 
     ");
 

@@ -50,7 +50,7 @@ if (isset($_POST["login"])) {
 
     <link rel="stylesheet" href="./src/css/bootstrap-5.2.0/css/bootstrap.min.css">
 
-    <title>Login</title>
+    <title>Selamat Datang di The Burjo</title>
 
 </head>
 
