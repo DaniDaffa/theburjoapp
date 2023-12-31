@@ -204,9 +204,9 @@ function tambah_data_menu()
 
     $id_menu = ambil_data("SELECT MAX(SUBSTR(kode_menu, 3)) AS kode FROM menu")[0]["kode"] + 1;
 
-    mysqli_query($koneksi, "INSERT INTO menu
+    mysqli_query($koneksi, "INSERT INTO menu (kode_menu, nama, harga, gambar, kategori, status)
 
-                            VALUES ($id_menu, '$kode_menu', '$nama', $harga, '$nama_gambar', '$kategori', '$status')
+                            VALUES ('$kode_menu', '$nama', $harga, '$nama_gambar', '$kategori', '$status')
 
     ");
 
