@@ -337,3 +337,79 @@ function hapus_data_menu()
 
     return mysqli_affected_rows($koneksi);
 }
+// Tambah Data Pesanan & Transaksi
+
+function tambah_data_pesanan()
+
+{
+
+    global $koneksi;
+
+
+
+    // Nama Pelanggan
+
+    $pelanggan = htmlspecialchars($_POST["pelanggan"]);
+
+    // Generate Kode Pesanan
+
+    $kode_pesanan = uniqid();
+
+
+
+    // Mengambil Data Qty dan Kode Menu
+
+    $list_pesanan = [];
+
+    $max_menu = count(ambil_data("SELECT * FROM menu"));
+
+    for ($i = 1; $i <= $max_menu; $i++) {
+
+        if ((int) $_POST["qty$i"] != 0) {
+
+            array_push($list_pesanan, [
+
+                "kode_menu" => $_POST["kode_menu$i"],
+
+                "qty" => (int) $_POST["qty$i"]
+
+            ]);
+        }
+    }
+
+
+    // Cek Jika Memesan Tapi Kosong
+    if (count($list_pesanan) == 0) {
+        echo "<script>
+            alert('Anda belum memesan menu!');
+        </script>";
+        return -1;
+    }
+
+    // Tambah Data Pesanan
+
+    foreach ($list_pesanan as $lp) {
+
+        $kode_menu = $lp["kode_menu"];
+
+        $qty = $lp["qty"];
+
+        mysqli_query($koneksi, "INSERT INTO `pesanan` (kode_pesanan, kode_menu, qty)
+
+                                VALUES ('$kode_pesanan', '$kode_menu', $qty);
+
+        ");
+    }
+
+
+
+    // Tambah Data Transaksi
+
+    mysqli_query($koneksi, "INSERT INTO `transaksi` (kode_pesanan, nama_pelanggan, waktu)
+
+                            VALUES ('$kode_pesanan', '$pelanggan', NOW())
+
+    ");
+
+    return mysqli_affected_rows($koneksi);
+}
