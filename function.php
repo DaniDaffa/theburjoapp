@@ -413,3 +413,32 @@ function tambah_data_pesanan()
 
     return mysqli_affected_rows($koneksi);
 }
+
+// Hapus Data Pesanan & Transaksi
+
+function hapus_data_pesanan()
+
+{
+
+    global $koneksi;
+
+
+
+    $kode_pesanan = $_GET["kode_pesanan"];
+
+    // eksekusi query delete
+
+    mysqli_query($koneksi, "DELETE FROM transaksi
+
+                            WHERE kode_pesanan = '$kode_pesanan'
+
+    ");
+
+    mysqli_query($koneksi, "DELETE FROM pesanan
+
+                            WHERE kode_pesanan = '$kode_pesanan'
+
+    ");
+
+    return mysqli_affected_rows($koneksi);
+}
