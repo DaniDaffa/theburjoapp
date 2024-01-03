@@ -199,14 +199,21 @@ function tambah_data_menu()
     move_uploaded_file($_FILES["gambar"]["tmp_name"], "src/img/$nama_gambar");
 
 
+    $generate_id = ambil_data ("SELECT * FROM menu");
+    if (count($generate_id) > 0) {
+        $id_menu = count($generate_id) + 1;
+    } else {
+        $id_menu = 1;
+    }
 
     // eksekusi query insert
 
-    $id_menu = ambil_data("SELECT MAX(SUBSTR(kode_menu, 3)) AS kode FROM menu")[0]["kode"] + 1;
+    // $id_menu = ambil_data("SELECT MAX(SUBSTR(kode_menu, 3)) AS kode FROM menu")[0]["kode"] + 1;
 
-    mysqli_query($koneksi, "INSERT INTO menu (kode_menu, nama, harga, gambar, kategori, status)
+    mysqli_query($koneksi, "INSERT INTO menu 
+    -- (kode_menu, nama, harga, gambar, kategori, status)
 
-                            VALUES ('$kode_menu', '$nama', $harga, '$nama_gambar', '$kategori', '$status')
+                            VALUES ($id_menu,'$kode_menu', '$nama', $harga, '$nama_gambar', '$kategori', '$status')
 
     ");
 

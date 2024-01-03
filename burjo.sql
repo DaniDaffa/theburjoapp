@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 31 Des 2023 pada 06.15
+-- Waktu pembuatan: 03 Jan 2024 pada 12.43
 -- Versi server: 8.0.30
 -- Versi PHP: 8.1.10
 
@@ -70,24 +70,26 @@ INSERT INTO `menu` (`id_menu`, `kode_menu`, `nama`, `harga`, `gambar`, `kategori
 (8, 'MN8', 'Chicken Grill Fire', 25000, '6590ebadeb7d7.jpg', 'Makanan', 'tersedia'),
 (9, 'MN9', 'Chicken Karage Fire', 25000, '6590ebcaf40d7.jpeg', 'Makanan', 'tersedia'),
 (10, 'MN10', 'Milk Shake Chocolate', 20000, '6590ebe692244.jpeg', 'Minuman', 'tersedia'),
-(11, 'MN10', 'Chicken Crispy Double', 25000, '65910189e5a35.jpg', 'Makanan', 'tersedia'),
-(12, 'MN10', 'Es Jeruk', 6000, '659101e92ea35.jpg', 'Minuman', 'tersedia'),
-(13, 'MN10', 'Jus Mangga', 15000, '6591028e03ba2.jpg', 'Minuman', 'tersedia'),
-(14, 'MN10', 'Shawarma Chicken', 25000, '659103ff3dc63.jpg', 'Snack', 'tersedia'),
-(15, 'MN10', 'Grill Beef Burger', 17500, '6591042d971a7.jpg', 'Snack', 'tersedia'),
-(16, 'MN10', 'Chicken Katsu Burger', 15000, '65910457ba665.jpg', 'Snack', 'tersedia'),
-(17, 'MN10', 'Karage Chicken', 22500, '65910488596e0.jpg', 'Snack', 'tersedia'),
-(18, 'MN10', 'Kentang Goreng', 15000, '659104b0952f4.jpg', 'Snack', 'tersedia'),
-(19, 'MN10', 'Mie Goreng', 16000, '659104e01e093.jpg', 'Fast Food', 'tersedia'),
-(20, 'MN10', 'Spaghetti Bolognese Chicken', 17500, '659105265c8c5.jpg', 'Fast Food', 'tersedia'),
-(21, 'MN10', 'Spaghetti Bolognese Beef', 20000, '6591054803754.jpg', 'Fast Food', 'tersedia'),
-(22, 'MN10', 'Fettucini Carbonara Smoked Beef', 25000, '6591057e890b7.jpg', 'Fast Food', 'tersedia'),
-(23, 'MN10', 'Pizza Mince Chicken', 35000, '659105e909cd5.jpg', 'Dessert', 'tersedia'),
-(24, 'MN10', 'Pizza Beef Sausages', 35000, '6591060d3cd0f.jpg', 'Dessert', 'tersedia'),
-(25, 'MN10', 'Pizza Smoked Beef', 40000, '6591063bf066e.jpg', 'Dessert', 'tersedia'),
-(26, 'MN10', 'Pizza Mince Beef', 40000, '6591065ef408d.jpg', 'Dessert', 'tersedia'),
-(27, 'MN10', 'Beef Tenderloin Grill', 40000, '659106a3b918c.jpg', 'Makanan', 'tersedia'),
-(28, 'MN10', 'Chicken Cordon Bleu', 32500, '659106db6f28f.jpg', 'Makanan', 'tersedia');
+(11, 'MN11', 'Chicken Crispy Double', 25000, '65910189e5a35.jpg', 'Makanan', 'tersedia'),
+(12, 'MN12', 'Es Jeruk', 6000, '659101e92ea35.jpg', 'Minuman', 'tersedia'),
+(13, 'MN13', 'Jus Mangga', 15000, '6591028e03ba2.jpg', 'Minuman', 'tersedia'),
+(14, 'MN14', 'Shawarma Chicken', 25000, '659103ff3dc63.jpg', 'Snack', 'tersedia'),
+(15, 'MN15', 'Grill Beef Burger', 17500, '6591042d971a7.jpg', 'Snack', 'tersedia'),
+(16, 'MN16', 'Chicken Katsu Burger', 15000, '65910457ba665.jpg', 'Snack', 'tersedia'),
+(17, 'MN17', 'Karage Chicken', 22500, '65910488596e0.jpg', 'Snack', 'tersedia'),
+(18, 'MN18', 'Kentang Goreng', 15000, '659104b0952f4.jpg', 'Snack', 'tersedia'),
+(19, 'MN19', 'Mie Goreng', 16000, '659104e01e093.jpg', 'Fast Food', 'tersedia'),
+(20, 'MN20', 'Spaghetti Bolognese Chicken', 17500, '659105265c8c5.jpg', 'Fast Food', 'tersedia'),
+(21, 'MN21', 'Spaghetti Bolognese Beef', 20000, '6591054803754.jpg', 'Fast Food', 'tersedia'),
+(22, 'MN22', 'Fettucini Carbonara Smoked Beef', 25000, '6591057e890b7.jpg', 'Fast Food', 'tersedia'),
+(23, 'MN23', 'Pizza Mince Chicken', 35000, '659105e909cd5.jpg', 'Dessert', 'tersedia'),
+(24, 'MN24', 'Pizza Beef Sausages', 35000, '6591060d3cd0f.jpg', 'Dessert', 'tersedia'),
+(25, 'MN25', 'Pizza Smoked Beef', 40000, '6591063bf066e.jpg', 'Dessert', 'tersedia'),
+(26, 'MN26', 'Pizza Mince Beef', 40000, '6591065ef408d.jpg', 'Dessert', 'tersedia'),
+(27, 'MN27', 'Beef Tenderloin Grill', 40000, '659106a3b918c.jpg', 'Makanan', 'tersedia'),
+(28, 'MN28', 'Chicken Cordon Bleu', 32500, '659106db6f28f.jpg', 'Makanan', 'tersedia'),
+(29, 'MN29', 'Susu Jahe', 5000, '659556212828a.jpeg', 'Minuman', 'tersedia'),
+(30, 'MN30', 'Cah Kangkung', 8000, '659555b04b05d.jpeg', 'Makanan', 'tersedia');
 
 -- --------------------------------------------------------
 
@@ -108,7 +110,11 @@ CREATE TABLE `pesanan` (
 
 INSERT INTO `pesanan` (`id_pesanan`, `kode_pesanan`, `kode_menu`, `qty`) VALUES
 (91, '6590f68eb4b98', 'MN9', 2),
-(92, '6590f68eb4b98', 'MN8', 1);
+(92, '6590f68eb4b98', 'MN8', 1),
+(104, '659550b544752', 'MN9', 1),
+(105, '659550b544752', 'MN10', 1),
+(106, '659550b544752', 'MN10', 1),
+(107, '659554366bed4', 'MN10', 1);
 
 -- --------------------------------------------------------
 
@@ -128,7 +134,9 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `kode_pesanan`, `nama_pelanggan`, `waktu`) VALUES
-(28, '6590f68eb4b98', 'Dani', '2023-12-31 12:05:18');
+(28, '6590f68eb4b98', 'Dani', '2023-12-31 12:05:18'),
+(34, '659550b544752', 'daffasyhptr', '2024-01-03 19:19:01'),
+(35, '659554366bed4', 'ramdani', '2024-01-03 19:33:58');
 
 -- --------------------------------------------------------
 
@@ -200,19 +208,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id_menu` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_menu` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT untuk tabel `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `id_pesanan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id_pesanan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
